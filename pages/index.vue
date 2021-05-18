@@ -1,65 +1,51 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">portfolio</h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+    <div id="app">
+        <h1>簡単なTodoリスト</h1>
+        <ul>
+            <li v-for="(todo, i) in todos" :key="i">
+                <input type="checkbox" :checked="todo.done" @change="todosStore.toggle(todo)" />
+                <span :class="{ done: todo.done }">{{ todo.text }}</span>
+                <button @click="todosStore.remove(todo)">削除</button>
+            </li>
+            <li>
+                <input placeholder="Todo を入力" @keyup.enter="addTodo" />
+            </li>
+        </ul>
     </div>
-  </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { Component, Vue } from 'nuxt-property-decorator';
 
-export default Vue.extend({})
+import { Todo } from '../models/Todo';
+
+import { todosStore } from '../store';
+
+@Component
+export default class Index extends Vue {
+
+    get todos(): Array<Todo> {
+        return todosStore.todos;
+    }
+
+    addTodo(e: any): void {
+        todosStore.add(e.target.value);
+        e.target.value = '';
+    }
+
+    removeTodo(todo: Todo) {
+        todosStore.remove(todo);
+    }
+
+    toggleTodo(todo: Todo) {
+        todosStore.toggle(todo);
+    }
+
+}
 </script>
 
 <style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+.done {
+    text-decoration: line-through;
 }
 </style>
