@@ -10,13 +10,13 @@
                     <div style="display: block">
                         <h1 class="name">Taichi Uchida / 内田 大智</h1>
                         <p class="position" style="color: #aaaaaa">Visual Artist / Programmer</p>
-                        <p class="intro item">Affiliation</p>
+                        <p class="intro item">- Affiliation</p>
                         <p class="intro tag">University of Tsukuba, Media Arts, Science and Technology</p>
-                        <p class="intro item">Skills</p>
+                        <p class="intro item">- Skills</p>
                         <p class="intro tag">WebGL / TouchDesigner / GLSL / JS / Vue.js</p>
-                        <p class="intro item">Interests</p>
+                        <p class="intro item">- Interests</p>
                         <p class="intro tag">Creative Coding / Visual Production / Web / Machine Learning</p>
-                        <p class="intro item">Accounts</p>
+                        <p class="intro item">- Accounts</p>
                         <p class="intro"> 
                             <span @click="openLink('https://twitter.com/_t_ai__')"><span class="account">Twitter</span> /</span>
                             <span @click="openLink('https://www.instagram.com/_t_ai__/')"><span class="account">Instagram</span> /</span>
@@ -161,7 +161,6 @@ export default class HomeHeader extends Vue {
 }
 .item {
     font-size: max(min(20px, 1.3vw), 12px);
-    font-weight: bold;
     margin-top: 2vw;
 }
 .account {
