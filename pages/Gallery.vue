@@ -37,18 +37,12 @@ import Footer from '@/components/Footer.vue';
 export default class Gallery extends Vue {
     images: Array<string> = [];
 
-    getImages(): void {
-        photosStore.getImages()
-        .catch((err) => {
-            console.error(err);
-        });
-    }
-
     created() {
         if (photosStore.images.length === 0) {
-            this.getImages();
+            this.$router.push('/');
+        } else {
+            this.images = photosStore.images;
         }
-        this.images = photosStore.images;
     }
 
     mounted() {
@@ -132,6 +126,9 @@ export default class Gallery extends Vue {
 }
 
 @media screen and (max-width: 800px) {
+    .gallery_container .container {
+        margin: 0 9.5vw;
+    }
     .gallery_container .img_container {
         width: 100%;
     }

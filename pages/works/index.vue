@@ -33,13 +33,7 @@ import Footer from '@/components/Footer.vue';
 })
 export default class Works extends Vue {
     works: Array<Work> = [];
-
-    getWorks(): void {
-        worksStore.getWorks()
-        .catch((err) => {
-            console.error(err);
-        });
-    }
+    this: any = this;
 
     onClick(index: number): void {
         workIndexStore.setIndex(index);
@@ -47,10 +41,10 @@ export default class Works extends Vue {
 
     created() {
         if (worksStore.works.length === 0) {
-            this.getWorks();
+            this.$router.push('/');
+        } else {
+            this.works = worksStore.works;
         }
-        this.works = worksStore.works;
-        console.log(this.works);
     }
 
     mounted() {

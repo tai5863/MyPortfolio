@@ -4,7 +4,7 @@
         <div class="about_container">
             <div class="container">
                 <div class="photo_container">
-                    <img class="photo" :src="image" width="1280" height="1280" v-if="image !== ''">
+                    <img class="photo" :src="image" width="1280" height="1280">
                 </div>
                 <div class="intro_container">
                     <div style="display: block">
@@ -50,22 +50,16 @@ export default class HomeHeader extends Vue {
 
     image = '';
 
-    getImage() {
-        profileImgStore.getImage()
-        .catch((err) => {
-            console.error(err);
-        });
-    }
-
     openLink = function(link: string) {
       window.open(link);
     }
 
     created() {
         if (profileImgStore.image === '') {
-            this.getImage();
+            this.$router.push('/');
+        } else {
+            this.image = profileImgStore.image;
         }
-        this.image = profileImgStore.image;
     }
 
     mounted () {
@@ -167,6 +161,7 @@ export default class HomeHeader extends Vue {
 
 @media screen and (max-width: 1200px) {  
     .about_container .container {
+        width: 81vw;
         display: block;
         margin: 10% auto 20%;
     }

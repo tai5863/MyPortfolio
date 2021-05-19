@@ -165,17 +165,17 @@ export default class WorkPage extends Vue {
 }
 
 @media screen and (max-width: 600px) {
- .work_container .container {
-    width: 80vw;
-    padding: 0;
- } 
- .work_container .title_container {
-   margin: 10px 0;
- }
-.work_container .photo {
-  width: 100%;
-  min-width: 300px;
-  margin: 10px 0;
-}
+    .work_container .container {
+        width: 81vw;
+        padding: 0;
+    } 
+    .work_container .title_container {
+    margin: 10px 0;
+    }
+    .work_container .photo {
+    width: 100%;
+    min-width: 300px;
+    margin: 10px 0;
+    }
 }
 </style>
