@@ -39,21 +39,16 @@ export default class Gallery extends Vue {
 
     getImages(): void {
         photosStore.getImages()
-        .then(() => {
-            this.images = photosStore.images;
-            localStorage.setItem('photos', JSON.stringify(photosStore.images));
-        })
         .catch((err) => {
             console.error(err);
         });
     }
 
     created() {
-        if (!JSON.parse(<string>localStorage.getItem('photos')) || !localStorage.photos) {
+        if (photosStore.images.length === 0) {
             this.getImages();
-        } else {
-            this.images = JSON.parse(<string>localStorage.getItem('photos'));
         }
+        this.images = photosStore.images;
     }
 
     mounted() {
@@ -87,13 +82,10 @@ export default class Gallery extends Vue {
 
 <style scoped>
 .gallery_container .container {
-    margin: 0 9.5vw;
+    margin: 0 17.5vw;
 }
 .item-wrapper {
     padding-top: 2vw;
-}
-#reel-wrapper {
-    padding-bottom: 10vw;
 }
 .item-wrapper .title {
     font-family: Kiona;

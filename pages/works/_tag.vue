@@ -28,6 +28,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator';
+import { workIndexStore, worksStore } from '@/store';
 import { Work } from '@/models/Work';
 import Footer from '@/components/Footer.vue';
 
@@ -38,14 +39,11 @@ import Footer from '@/components/Footer.vue';
     }
 })
 export default class WorkPage extends Vue {
-    color =  'rgb(0, 0, 0)';
+    color = 'rgb(0, 0, 0)';
 
     get work(): Work {
-        return JSON.parse(<string>localStorage.getItem('works'))[localStorage.index];
-    }
-
-    created() {
-        console.log(JSON.parse(<string>localStorage.getItem('works'))[localStorage.index]);
+        console.log(worksStore.works[workIndexStore.index]);
+        return worksStore.works[workIndexStore.index];
     }
 
     mounted () {
@@ -115,7 +113,7 @@ export default class WorkPage extends Vue {
 }
 .work_container .title_container {
   text-align: left;
-  margin-bottom: 70px;
+  margin-bottom: 50px;
 }
 .work_container .work_name {
   font-family: 'Kiona';
@@ -163,7 +161,7 @@ export default class WorkPage extends Vue {
   width: 100%;
   height: auto;
   min-width: 300px;
-  margin: 0 0 70px 0;
+  margin: 0 0 50px 0;
 }
 
 @media screen and (max-width: 600px) {

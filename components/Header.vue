@@ -24,7 +24,7 @@ export default class Header extends Vue {
 
 <style>
 #header {
-    margin-top: 30px;
+    padding-top: 30px;
     z-index: 1;
 }
 #header_container {

@@ -46,16 +46,12 @@ export default class HomeHeader extends Vue {
         { name: 'GitHub', url: 'https://github.com/tai5863/', cut: 0 }
     ];
 
-    color =  'rgb(0, 0, 0)';
+    color = 'rgb(0, 0, 0)';
 
-    image: string = '';
+    image = '';
 
-    getImage(): void {
+    getImage() {
         profileImgStore.getImage()
-        .then(() => {
-            this.image = profileImgStore.image;
-            localStorage.profileImg = profileImgStore.image;
-        })
         .catch((err) => {
             console.error(err);
         });
@@ -66,11 +62,10 @@ export default class HomeHeader extends Vue {
     }
 
     created() {
-        if (localStorage.profileImg === '' || !localStorage.profileImg) {
+        if (profileImgStore.image === '') {
             this.getImage();
-        } else {
-            this.image = localStorage.profileImg;
         }
+        this.image = profileImgStore.image;
     }
 
     mounted () {
@@ -108,9 +103,13 @@ export default class HomeHeader extends Vue {
 </script>
 
 <style scoped>
+.about_container {
+    position: relative;
+    z-index: 1000;
+}
 .about_container .container {
     margin: 10vw auto;
-    width: 81vw;
+    width: 65vw;
     display: flex;
     height: 100%;
 }

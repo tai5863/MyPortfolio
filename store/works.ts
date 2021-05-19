@@ -1,6 +1,6 @@
 import { Module, VuexModule, Mutation, Action } from 'vuex-module-decorators';
 import firebase from '@/plugins/firebase';
-import { Work } from '@/models/Work';
+import { Work, Coop } from '@/models/Work';
 
 @Module({ stateFactory: true, namespaced: true, name: 'works' })
 export default class Works extends VuexModule {
@@ -9,7 +9,7 @@ export default class Works extends VuexModule {
 
     @Mutation
     addWork(work: Work) {
-        this.works.push(work);
+        this.works[work.index] = work;
     }
 
     @Mutation
@@ -30,6 +30,7 @@ export default class Works extends VuexModule {
                         let work = works[workName];
                         let messages: Array<string> = [];
                         let images: Array<string> = [];
+                        let cooperators: Array<Coop> = [];
                         Object.keys(work).map((key) => {
                             if (key.toString().includes('message')) {
                                 messages.push(work[key]);
@@ -38,14 +39,16 @@ export default class Works extends VuexModule {
                                 images.push(work[key]);
                                 this.addName(work[key]);
                                 delete work[key];
+                            } else if (key.toString().includes('cooperator')) {
+                                cooperators.push(work[key]);
+                                delete work[key];
                             }
                         });
                         work.messages = messages;
                         work.images = images;
+                        work.cooperators = cooperators;
 
                         this.getImages(work);
-
-                        console.log(this.works);
                     });
                     resolve('Got works.');
                 }
