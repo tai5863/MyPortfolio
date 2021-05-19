@@ -17,7 +17,7 @@ export default class Footer extends Vue {}
 
 <style>
 #footer {
-    padding-top: 50px;
+    padding-top: 1vw;
 }
 #footer_container {
     position: relative;

@@ -113,7 +113,6 @@ export default class WorkPage extends Vue {
 }
 .work_container .title_container {
   text-align: left;
-  margin-bottom: 50px;
 }
 .work_container .work_name {
   font-family: 'Kiona';
@@ -122,16 +121,14 @@ export default class WorkPage extends Vue {
   font-size: min(30px, 3vw);
 
   margin: 0;
-  display: inline;
 }
 .work_container .date {
   font-family: 'Kiona';
+  margin: 0.5vw 0;
   font-style: normal;
   font-weight: normal;
   font-size: min(20px, 2vw);
 
-  display: inline;
-  margin-left: 50px;
   color: rgb(140, 140, 140);
 }
 .message_wrapper {
@@ -161,7 +158,7 @@ export default class WorkPage extends Vue {
   width: 100%;
   height: auto;
   min-width: 300px;
-  margin: 0 0 50px 0;
+  margin: 0 0 1vw;
 }
 
 @media screen and (max-width: 600px) {

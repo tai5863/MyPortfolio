@@ -102,7 +102,7 @@ export default class HomeHeader extends Vue {
     z-index: 1000;
 }
 .about_container .container {
-    margin: 10vw auto;
+    margin: 8vw auto;
     width: 65vw;
     display: flex;
     height: 100%;
@@ -144,10 +144,7 @@ export default class HomeHeader extends Vue {
 
     margin-left: 1%;
 
-    color: white;
-    font-weight: bold;
-
-    padding-bottom: 3%;
+    padding-bottom: 2%;
 }
 .intro {
     text-align: left;

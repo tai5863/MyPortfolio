@@ -79,11 +79,11 @@ export default class Gallery extends Vue {
     margin: 0 17.5vw;
 }
 .item-wrapper {
-    padding-top: 2vw;
+    padding-bottom: 5vw;
 }
 .item-wrapper .title {
     font-family: Kiona;
-    margin: 2vw auto;
+    margin: 1vw auto;
     font-style: normal;
     font-weight: normal;
     font-size: min(30px, 3vw);

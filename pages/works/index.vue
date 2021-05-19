@@ -5,6 +5,7 @@
             <div class="container" v-if="works.length !== 0">
                 <div v-for="(work, index) in works" :key="index" class="work">
                     <h1 class="work_title">{{ work.name }}</h1>
+                    <h2 class="date">{{ work.date }}</h2>
                     <div class="img_container">
                         <div class="img_wrapper">
                             <router-link :to="`works/${work.tag}`" @click.native="onClick(index)"><img :src="work.images[0]" class="img first" width="1920" height="1080" /></router-link>
@@ -78,59 +79,79 @@ export default class Works extends Vue {
 
 <style scoped>
 .works_container .container {
-  margin: 1% 13.5vw 0;
-  display: flex;
-  justify-content: space-between;
-  flex-flow: row wrap;
+    margin: 2vw 13.5vw 0;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
 }
 .work {
-  width: 50%;
-  padding-top: 2vw;
-  padding-bottom: 2vw;
+    width: 50%;
+    padding-bottom: 1vw;
 }
 .work_title {
-  width: 80%;
-  margin: 1vw auto;
-  font-family: 'Kiona';
-  font-style: normal;
-  font-weight: normal;
-  font-size: min(25px, 2vw);
-  text-align: center;
+    width: 80%;
+    margin: 1vw auto 0;
+    font-family: 'Kiona';
+    font-style: normal;
+    font-weight: normal;
+    font-size: min(25px, 2vw);
+    text-align: left;
+}
+.date {
+    width: 80%;
+    margin: 0.5vw auto;
+    font-family: 'Kiona';
+    font-style: normal;
+    font-weight: normal;
+    font-size: min(20px, 2vw);
+
+    color: rgb(140, 140, 140);
 }
 .img_container {
-  text-align: center;
+    text-align: center;
 }
 .img_wrapper {
-  width: 80%;
-  margin: 0 auto;
+    width: 80%;
+    margin: 0 auto;
 }
 .img {
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
-  min-width: 300px;
-  cursor: pointer;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    min-width: 300px;
+    cursor: pointer;
 }
 
 .img_container :hover {
-  opacity: 0.8;
-  transition-duration: 0.5s;
+    opacity: 0.8;
+    transition-duration: 0.5s;
 }
 
 @media screen and (max-width: 1200px) {
-  #works_container #container {
-    margin: 0 9.5vw;
-  }
-  .work {
-    width: 100%;
-    padding-bottom: 5vw;
-  }
-  .work_title {
-    font-size: 3vw;
-  }
-  .img_wrapper {
-    width: 100%;
-  }
+    .works_container .container {
+        margin: 0 17.5vw;
+    }
+    .work {
+        width: 100%;
+        padding-bottom: 5vw;
+    }
+    .date {
+        width: 100%;
+    }
+    .work_title {
+        width: 100%;
+        text-align: left;
+        font-size: 3vw;
+    }
+    .img_wrapper {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .works_container .container {
+        margin: 0 9.5vw;
+    }
 }
 </style>
 
