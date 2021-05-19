@@ -10,13 +10,13 @@
                     <div style="display: block">
                         <h1 class="name">Taichi Uchida / 内田 大智</h1>
                         <p class="position" style="color: #aaaaaa">Visual Artist / Programmer</p>
-                        <p class="intro item">- Affiliation</p>
+                        <p class="item">- Affiliation</p>
                         <p class="intro tag">University of Tsukuba, Media Arts, Science and Technology</p>
-                        <p class="intro item">- Skills</p>
+                        <p class="item">- Skills</p>
                         <p class="intro tag">WebGL / TouchDesigner / GLSL / JS / Vue.js</p>
-                        <p class="intro item">- Interests</p>
+                        <p class="item">- Interests</p>
                         <p class="intro tag">Creative Coding / Visual Production / Web / Machine Learning</p>
-                        <p class="intro item">- Accounts</p>
+                        <p class="item">- Accounts</p>
                         <p class="intro"> 
                             <span @click="openLink('https://twitter.com/_t_ai__')"><span class="account">Twitter</span> /</span>
                             <span @click="openLink('https://www.instagram.com/_t_ai__/')"><span class="account">Instagram</span> /</span>
@@ -152,16 +152,17 @@ export default class HomeHeader extends Vue {
 .intro {
     text-align: left;
 
-    /* font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif; */
-    font-family: 'Kiona';
+    font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif;
+    /* font-family: 'Kiona'; */
     font-style: normal;
     font-weight: normal;
     font-size: max(min(18px, 1vw), 10px);
     margin-top: 0.5vw;
 }
 .item {
+    font-family: 'Kiona';
     font-size: max(min(20px, 1.3vw), 12px);
-    margin-top: 2vw;
+    margin-top: 30px;
 }
 .account {
     cursor: pointer;
