@@ -24,11 +24,11 @@ export default class Header extends Vue {
 
 <style>
 #header {
-    padding-top: 30px;
+    padding-top: 50px;
     z-index: 1;
 }
 #header_container {
-    margin: 0 9.5vw;
+    margin: 0 17.5vw;
     height: 87px;
     display: flex;
     justify-content: space-between;
@@ -81,10 +81,16 @@ export default class Header extends Vue {
 }
 
 @media screen and (max-width: 800px) {
+    #header {
+        padding-top: 00px;
+    }
     #header_comp {
         top: 0;
         margin: 0;
     } 
+    #header_container {
+        margin: 0 9.5vw;
+    }
     #header_container #name {
         font-size: 3.5vw;
     }

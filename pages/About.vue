@@ -115,7 +115,7 @@ export default class HomeHeader extends Vue {
 }
 .about_container .photo {
     height: auto;
-    width: 300px;
+    width: min(60%, 300px);
 }
 .intro_container {
     display: flex;
@@ -125,32 +125,38 @@ export default class HomeHeader extends Vue {
 .about_container .name {
     text-align: left;
 
-    font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif;
+    /* font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif; */
+    font-family: 'Kiona', "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: min(40px, 3vw);
+    font-size: max(min(30px, 2vw), 15px);
 
     margin: 0;
 }
 .position {
     text-align: left;
 
-    font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif;
+    /* font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif; */
+    font-family: 'Kiona';
     font-style: normal;
     font-weight: normal;
-    font-size: min(22px, 2.3vw);
+    font-size: min(20px, 1.3vw);
 
     margin-left: 1%;
 
-    color: rgb(140, 140, 140);
+    color: white;
+    font-weight: bold;
+
+    padding-bottom: 3%;
 }
 .intro {
     text-align: left;
 
-    font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif;
+    /* font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif; */
+    font-family: 'Kiona';
     font-style: normal;
     font-weight: normal;
-    font-size: min(18px, 2vw);
+    font-size: min(18px, 1vw);
 
     margin-top: 20px;
 }
@@ -161,20 +167,23 @@ export default class HomeHeader extends Vue {
 
 @media screen and (max-width: 1200px) {  
     .about_container .container {
-        width: 81vw;
         display: block;
-        margin: 10% auto 20%;
+        margin: 5% auto 10%;
     }
     .about_container .photo_container {
         width: 100%;
     }
     .about_container .photo {
-        margin: 0 0 20%;
-        width: 40%;
+        margin: 0 0 15%;
     }
     .intro_container {
-        width: 90%;
+        width: 100%;
         margin: 0 auto; 
+    }
+}
+@media screen and (max-width: 800px) {
+    .about_container .container {
+        width: 81vw;
     }
 }
 </style>

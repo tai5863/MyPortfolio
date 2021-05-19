@@ -132,5 +132,8 @@ export default class Gallery extends Vue {
     .gallery_container .img_container {
         width: 100%;
     }
+    .gallery_container .img_container {
+        margin-bottom: 1vw;
+    }
 }
 </style>

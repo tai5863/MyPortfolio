@@ -78,7 +78,7 @@ export default class Works extends Vue {
 
 <style scoped>
 .works_container .container {
-  margin: 0 13.5vw;
+  margin: 1% 13.5vw 0;
   display: flex;
   justify-content: space-between;
   flex-flow: row wrap;
@@ -86,11 +86,11 @@ export default class Works extends Vue {
 .work {
   width: 50%;
   padding-top: 2vw;
-  padding-bottom: 3vw;
+  padding-bottom: 2vw;
 }
 .work_title {
   width: 80%;
-  margin: 2vw auto;
+  margin: 1vw auto;
   font-family: 'Kiona';
   font-style: normal;
   font-weight: normal;
