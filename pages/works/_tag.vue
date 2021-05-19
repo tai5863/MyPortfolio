@@ -15,7 +15,7 @@
                         <img class="photo" :src="work.images[2]" v-if="work.images[2]" width="1920" height="1080" />
                         <img class="photo" :src="work.images[3]" v-if="work.images[3]" width="1920" height="1080" />
                     </div>
-                    <p class="message_wrapper" v-for="message in work.messages" :key="message.key"><span class="message main">{{ message }}</span></p>
+                    <span class="message_wrapper" v-for="message in work.messages" :key="message.key"><p class="item">- Description</p><p class="message main">{{ message }}</p></span>
                     <span class="message_wrapper" v-if="work.tools"><p class="item">- Tools</p><p class="message tools">{{ work.tools }}</p></span>
                     <span class="message_wrapper" v-if="work.url"><p class="item">- Information</p><p class="message url"  @click="openLink(work.url)">{{ work.url }}</p></span>
                     <span class="message_wrapper" v-for="cooperator in work.cooperators" :key="cooperator.key"><p class="item">- {{ cooperator.direction }}</p><p class="message coop" >{{ cooperator.name }}</p></span>
@@ -140,14 +140,14 @@ export default class WorkPage extends Vue {
     font-weight: normal;
     font-size: max(min(18px, 1vw), 10px);
 
-    margin: 30px 0;
+    margin: 2vw 0;
 }
 .message {
     margin-top: 0.5vw;
 }
 .item {
     font-size: max(min(20px, 1.3vw), 12px);
-    margin: 30px 0 0;
+    margin: 2vw 0 0;
     font-family: 'Kiona', "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif;
 }
 .url:hover {

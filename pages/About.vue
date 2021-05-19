@@ -162,7 +162,7 @@ export default class HomeHeader extends Vue {
 .item {
     font-family: 'Kiona';
     font-size: max(min(20px, 1.3vw), 12px);
-    margin-top: 30px;
+    margin-top: 2vw;
 }
 .account {
     cursor: pointer;
