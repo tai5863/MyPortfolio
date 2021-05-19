@@ -140,7 +140,7 @@ export default class HomeHeader extends Vue {
     font-family: 'Kiona';
     font-style: normal;
     font-weight: normal;
-    font-size: min(20px, 1.3vw);
+    font-size: max(min(20px, 1.3vw), 12px);
 
     margin-left: 1%;
 
@@ -156,7 +156,7 @@ export default class HomeHeader extends Vue {
     font-family: 'Kiona';
     font-style: normal;
     font-weight: normal;
-    font-size: min(18px, 1vw);
+    font-size: max(min(18px, 1vw), 10px);
 
     margin-top: 20px;
 }
@@ -175,6 +175,7 @@ export default class HomeHeader extends Vue {
     }
     .about_container .photo {
         margin: 0 0 15%;
+        width: 50%;
     }
     .intro_container {
         width: 100%;
