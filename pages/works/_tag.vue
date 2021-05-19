@@ -167,12 +167,7 @@ export default class WorkPage extends Vue {
         padding: 0;
     } 
     .work_container .title_container {
-    margin: 10px 0;
-    }
-    .work_container .photo {
-    width: 100%;
-    min-width: 300px;
-    margin: 10px 0;
+        margin: 10px 0;
     }
 }
 </style>

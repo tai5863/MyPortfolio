@@ -9,13 +9,17 @@
                 <div class="intro_container">
                     <div style="display: block">
                         <h1 class="name">Taichi Uchida / 内田 大智</h1>
-                        <h2 class="position">Visual Artist / Programmer</h2>
-                        <p class="intro tag"> - Affiliation : University of Tsukuba, Media Arts, Science and Technology</p>
-                        <p class="intro tag"> - Skills : WebGL / TouchDesigner / GLSL / JS / Vue.js</p>
-                        <p class="intro tag"> - Interests : Creative Coding / Visual Production / Web / Machine Learning</p>
-                        <p class="intro"> - Accounts : 
-                            <span @click="openLink('https://twitter.com/_t_ai__')"><span class="account">Twitter</span>/</span>
-                            <span @click="openLink('https://www.instagram.com/_t_ai__/')"><span class="account">Instagram</span>/</span>
+                        <p class="position">Visual Artist / Programmer</p>
+                        <p class="intro item">Affiliation</p>
+                        <p class="intro tag">University of Tsukuba, Media Arts, Science and Technology</p>
+                        <p class="intro item">Skills</p>
+                        <p class="intro tag">WebGL / TouchDesigner / GLSL / JS / Vue.js</p>
+                        <p class="intro item">Interests</p>
+                        <p class="intro tag">Creative Coding / Visual Production / Web / Machine Learning</p>
+                        <p class="intro item">Accounts</p>
+                        <p class="intro"> 
+                            <span @click="openLink('https://twitter.com/_t_ai__')"><span class="account">Twitter</span> /</span>
+                            <span @click="openLink('https://www.instagram.com/_t_ai__/')"><span class="account">Instagram</span> /</span>
                             <span @click="openLink('https://github.com/tai5863/')"><span class="account">Github</span></span>
                         </p>
                     </div>
@@ -111,13 +115,14 @@ export default class HomeHeader extends Vue {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 40%;
 }
 .about_container .photo {
     height: auto;
     width: min(60%, 300px);
 }
 .intro_container {
+    margin-left: 5%;
     display: flex;
     justify-content: left;
     align-items: center;
@@ -135,14 +140,13 @@ export default class HomeHeader extends Vue {
 }
 .position {
     text-align: left;
+    color: rgb(140, 140, 140);
 
     /* font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif; */
     font-family: 'Kiona';
     font-style: normal;
     font-weight: normal;
     font-size: max(min(20px, 1.3vw), 12px);
-
-    margin-left: 1%;
 
     padding-bottom: 2%;
 }
@@ -157,22 +161,26 @@ export default class HomeHeader extends Vue {
 
     margin-top: 20px;
 }
+.item {
+    font-size: max(min(18px, 1vw), 10px);
+    font-weight: bold;
+}
 .account {
     cursor: pointer;
     text-decoration: underline black;
 }
 
-@media screen and (max-width: 1200px) {  
+@media screen and (max-width: 1500px) {  
     .about_container .container {
         display: block;
-        margin: 5% auto 10%;
+        margin: 10% auto 10%;
     }
     .about_container .photo_container {
         width: 100%;
     }
     .about_container .photo {
-        margin: 0 0 15%;
-        width: 50%;
+        margin: 0 0 20%;
+        width: 40%;
     }
     .intro_container {
         width: 100%;
@@ -181,7 +189,7 @@ export default class HomeHeader extends Vue {
 }
 @media screen and (max-width: 800px) {
     .about_container .container {
-        width: 81vw;
+        width: 75vw;
     }
 }
 </style>
