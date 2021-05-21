@@ -1,7 +1,7 @@
 <template>
     <div id="footer">
         <div id="footer_container">
-        <p id="copyright">@2020 Taichi Uchida</p>
+        <p id="copyright">© Taichi Uchida</p>
         </div>
     </div>
 </template>
@@ -29,6 +29,6 @@ export default class Footer extends Vue {}
     font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: min(15px, 2vw);
+    font-size: min(13px, 2vw);
 }
 </style>

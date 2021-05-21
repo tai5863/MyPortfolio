@@ -1,12 +1,16 @@
 <template>
     <div id="header">
         <div id="header_container">
-        <h1 id="name"><router-link to="/" style="text-decoration: none; color: #000000">Taichi Uchida</router-link></h1>
-        <nav id="nav_for_sections">
-            <ul id="header_ul">
-            <li v-for="section in sections" :key="section.id"><router-link :to="'/' + section" :id="section + '_nav'">{{ section }}</router-link></li>
-            </ul>
-        </nav>
+            <div>
+                <router-link to="/" style="text-decoration: none; color: #000000">
+                    <h1 id="name">Taichi Uchida</h1>
+                </router-link>
+            </div>
+            <nav id="nav_for_sections">
+                <ul id="header_ul">
+                <li v-for="section in sections" :key="section.id"><router-link :to="'/' + section" :id="section + '_nav'" class="nav">{{ section }}</router-link></li>
+                </ul>
+            </nav>
         </div>
     </div>
 </template>
@@ -78,6 +82,28 @@ export default class Header extends Vue {
 #about_nav {
     text-decoration: none;
     color: #000000;
+}
+.nav {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+.nav::after {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #333;
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
+}
+.nav:hover::after {
+  bottom: -4px;
+  opacity: 1;
+  visibility: visible;
 }
 
 @media screen and (max-width: 800px) {

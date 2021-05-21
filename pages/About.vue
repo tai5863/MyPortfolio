@@ -8,14 +8,15 @@
                 </div>
                 <div class="intro_container">
                     <div style="display: block">
-                        <h1 class="name">Taichi Uchida / 内田 大智</h1>
-                        <p class="position" style="color: #aaaaaa">Visual Artist / Programmer</p>
+                        <p class="item">- Position</p>
+                        <p class="intro tag">Visual Artist / Programmer</p>
                         <p class="item">- Affiliation</p>
-                        <p class="intro tag">University of Tsukuba, Media Arts, Science and Technology</p>
+                        <p class="intro tag">2016.04  - Kyoto Prefectural Sagano High School, 京都府立嵯峨野高校 京都こすもす科(共修)</p>
+                        <p class="intro tag">2019.04  - University of Tsukuba, Media Arts, Science and Technology / 筑波大学 情報メディア創成学類</p>
                         <p class="item">- Skills</p>
-                        <p class="intro tag">WebGL / TouchDesigner / GLSL / JS / Vue.js</p>
+                        <p class="intro tag">TouchDesigner / GLSL / WebGL / Vue.js(Nuxt.js) / TypeScript / HTML / CSS / JavaScript</p>
                         <p class="item">- Interests</p>
-                        <p class="intro tag">Creative Coding / Visual Production / Web / Machine Learning</p>
+                        <p class="intro tag">Creative Coding / Visual Production / Web Production / Machine Learning / Stage Performance / Track Making</p>
                         <p class="item">- Accounts</p>
                         <p class="intro"> 
                             <span @click="openLink('https://twitter.com/_t_ai__')"><span class="account">Twitter</span> /</span>
@@ -106,26 +107,28 @@ export default class HomeHeader extends Vue {
     z-index: 1000;
 }
 .about_container .container {
-    margin: 8vw auto;
-    width: 65vw;
-    display: flex;
+    margin: 6vw auto 8vw;
+    width: 63.5vw;
     height: 100%;
 }
 .about_container .photo_container {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40%;
+    width: 100%;
 }
 .about_container .photo {
     height: auto;
     width: min(60%, 300px);
+    margin: 0 0 10%;
+    width: 40%;
 }
 .intro_container {
-    margin-left: 5%;
     display: flex;
     justify-content: left;
     align-items: center;
+    width: 100%;
+    margin: 0 auto; 
 }
 .about_container .name {
     text-align: left;
@@ -169,23 +172,6 @@ export default class HomeHeader extends Vue {
     text-decoration: underline black;
 }
 
-@media screen and (max-width: 1500px) {  
-    .about_container .container {
-        display: block;
-        margin: 10% auto 10%;
-    }
-    .about_container .photo_container {
-        width: 100%;
-    }
-    .about_container .photo {
-        margin: 0 0 20%;
-        width: 40%;
-    }
-    .intro_container {
-        width: 100%;
-        margin: 0 auto; 
-    }
-}
 @media screen and (max-width: 800px) {
     .about_container .container {
         width: 75vw;

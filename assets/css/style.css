@@ -3,6 +3,11 @@
     src: url('@/static/fonts/Kiona-Regular.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Noto Sans JP';
+    src: url('@/static/fonts/NotoSansJP-Light.otf') format('opentype');
+}
+
 .page-enter-active, .page-leave-active {
   transition: opacity 0.5s
 }

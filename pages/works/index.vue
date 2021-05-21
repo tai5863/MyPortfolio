@@ -6,11 +6,11 @@
                 <div v-for="(work, index) in works" :key="index" class="work">
                     <h1 class="work_title">{{ work.name }}</h1>
                     <h2 class="date">{{ work.date }}</h2>
-                    <div class="img_container">
+                    <router-link :to="`works/${work.tag}`" @click.native="onClick(index)">
                         <div class="img_wrapper">
-                            <router-link :to="`works/${work.tag}`" @click.native="onClick(index)"><img :src="work.images[0]" class="img first" width="1920" height="1080" /></router-link>
+                            <img :src="work.images[0]" class="img first" width="1920" height="1080" />
                         </div>
-                    </div>
+                    </router-link>
                 </div>
             </div>
         </div>
@@ -107,11 +107,9 @@ export default class Works extends Vue {
 
     color: rgb(140, 140, 140);
 }
-.img_container {
-    text-align: center;
-}
 .img_wrapper {
     width: 80%;
+    height: auto;
     margin: 0 auto;
 }
 .img {
@@ -122,7 +120,7 @@ export default class Works extends Vue {
     cursor: pointer;
 }
 
-.img_container :hover {
+.img_wrapper :hover {
     opacity: 0.8;
     transition-duration: 0.5s;
 }
