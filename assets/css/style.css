@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Kiona';
-    src: url('~@/assets/fonts/Kiona-Regular.ttf') format('truetype');
+    src: url('@/static/fonts/Kiona-Regular.ttf') format('truetype');
 }
 
 .page-enter-active, .page-leave-active {
