@@ -14,6 +14,9 @@
                         <img class="photo" :src="work.images[1]" v-if="work.images[1]" width="1920" height="1080" />
                         <img class="photo" :src="work.images[2]" v-if="work.images[2]" width="1920" height="1080" />
                         <img class="photo" :src="work.images[3]" v-if="work.images[3]" width="1920" height="1080" />
+                        <img class="photo" :src="work.images[4]" v-if="work.images[4]" width="1920" height="1080" />
+                        <img class="photo" :src="work.images[5]" v-if="work.images[5]" width="1920" height="1080" />
+                        <img class="photo" :src="work.images[6]" v-if="work.images[6]" width="1920" height="1080" />
                     </div>
                     <span class="message_wrapper"><p class="item">- Description</p><div v-for="message in work.messages" :key="message.key"><p class="message main">{{ message }}</p></div></span>
                     <span class="message_wrapper" v-if="work.tools"><p class="item">- Tools</p><p class="message tools">{{ work.tools }}</p></span>
