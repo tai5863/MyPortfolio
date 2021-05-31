@@ -51,8 +51,8 @@ export default class WorkPage extends Vue {
 
     mounted () {
         let name = Array.from(document.getElementsByClassName('work_name'));
-        let message = Array.from(document.getElementsByClassName('message'));
-        let elements = name.concat(message);
+        let date = Array.from(document.getElementsByClassName('date'));
+        let elements = name.concat(date);
     
         elements.forEach((element) => {
             let txt_array = element.innerHTML.split('');

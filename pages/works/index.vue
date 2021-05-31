@@ -4,13 +4,13 @@
         <div class="works_container">
             <div class="container" v-if="works.length !== 0">
                 <div v-for="(work, index) in works" :key="index" class="work">
-                    <h1 class="work_title">{{ work.name }}</h1>
-                    <h2 class="date">{{ work.date }}</h2>
                     <router-link :to="`works/${work.tag}`" @click.native="onClick(index)">
                         <div class="img_wrapper">
                             <img :src="work.images[0]" class="img first" width="1920" height="1080" />
                         </div>
                     </router-link>
+                    <h1 class="work_title">{{ work.name }}</h1>
+                    <h2 class="date">{{ work.date }}</h2>
                 </div>
             </div>
         </div>
@@ -91,20 +91,20 @@ export default class Works extends Vue {
 }
 .work_title {
     width: 80%;
-    margin: 1vw auto 0;
-    font-family: 'Kiona';
-    font-style: normal;
-    font-weight: normal;
-    font-size: min(25px, 2vw);
-    text-align: left;
-}
-.date {
-    width: 80%;
-    margin: 0.5vw auto;
+    margin: 0 auto;
     font-family: 'Kiona';
     font-style: normal;
     font-weight: normal;
     font-size: min(20px, 2vw);
+    text-align: left;
+}
+.date {
+    width: 80%;
+    margin: 0 auto;
+    font-family: 'Kiona';
+    font-style: normal;
+    font-weight: normal;
+    font-size: min(18px, 1.8vw);
 
     color: rgb(140, 140, 140);
 }
@@ -128,7 +128,7 @@ export default class Works extends Vue {
 
 @media screen and (max-width: 1200px) {
     .works_container .container {
-        margin: 0 17.5vw;
+        margin: 6vw 17.5vw 0;
     }
     .work {
         width: 100%;
@@ -149,7 +149,7 @@ export default class Works extends Vue {
 
 @media screen and (max-width: 800px) {
     .works_container .container {
-        margin: 0 9.5vw;
+        margin: 6vw 9.5vw 0;
     }
 }
 </style>

@@ -76,7 +76,7 @@ export default class Gallery extends Vue {
 
 <style scoped>
 .gallery_container .container {
-    margin: 0 17.5vw;
+    margin: 2vw 17.5vw;
 }
 .item-wrapper {
     padding-bottom: 5vw;
@@ -125,9 +125,15 @@ export default class Gallery extends Vue {
     height: 100%;
 }
 
+@media screen and (max-width: 1200px) {
+    .gallery_container .container {
+        margin: 6vw 17.5vw;
+    }
+}
+
 @media screen and (max-width: 800px) {
     .gallery_container .container {
-        margin: 0 9.5vw;
+        margin: 6vw 9.5vw;
     }
     .gallery_container .img_container {
         width: 100%;

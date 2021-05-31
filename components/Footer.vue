@@ -1,7 +1,7 @@
 <template>
     <div id="footer">
         <div id="footer_container">
-        <p id="copyright">© Taichi Uchida</p>
+        <p id="copyright">©2020-2021 Taichi Uchida</p>
         </div>
     </div>
 </template>

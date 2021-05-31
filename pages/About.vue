@@ -68,11 +68,8 @@ export default class HomeHeader extends Vue {
     }
 
     mounted () {
-        let name = Array.from(document.getElementsByClassName('name'));
-        let position = Array.from(document.getElementsByClassName('position'));
-        let intro = Array.from(document.getElementsByClassName('tag'));
-        let accounts = Array.from(document.getElementsByClassName('account'));
-        let elements = name.concat(position).concat(intro).concat(accounts);
+        let items = Array.from(document.getElementsByClassName('item'));
+        let elements = items;
     
         elements.forEach((element) => {
             let txt_array = element.innerHTML.split('');
@@ -107,7 +104,7 @@ export default class HomeHeader extends Vue {
     z-index: 1000;
 }
 .about_container .container {
-    margin: 6vw auto 8vw;
+    margin: 2vw auto 2vw;
     width: 63.5vw;
     height: 100%;
 }
@@ -120,7 +117,6 @@ export default class HomeHeader extends Vue {
 .about_container .photo {
     height: auto;
     width: min(60%, 300px);
-    margin: 0 0 10%;
     width: 40%;
 }
 .intro_container {
@@ -154,11 +150,20 @@ export default class HomeHeader extends Vue {
 .item {
     font-family: 'Kiona';
     font-size: min(20px, 2vw);
-    margin-top: 2vw;
+    margin-top: 1.8vw;
 }
 .account {
     cursor: pointer;
     text-decoration: underline black;
+}
+
+@media screen and (max-width: 1200px) {
+    .about_container .container {
+        margin: 6vw auto 8vw;
+    }
+    .about_container .photo {
+        margin: 0 0 6vw;
+    }
 }
 
 @media screen and (max-width: 800px) {

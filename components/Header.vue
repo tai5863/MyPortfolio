@@ -28,11 +28,12 @@ export default class Header extends Vue {
 
 <style>
 #header {
-    padding-top: 50px;
+    background-color: #000000;
     z-index: 1;
 }
 #header_container {
-    margin: 0 17.5vw;
+    /* margin: 0 17.5vw; */
+    margin: 0 5.5vw;
     height: 87px;
     display: flex;
     justify-content: space-between;
@@ -45,7 +46,7 @@ export default class Header extends Vue {
     font-size: min(30px, 3vw);
     text-align: center;
 
-    color: #000000;
+    color: #ffffff;
     
     margin: 0;
 }
@@ -73,15 +74,15 @@ export default class Header extends Vue {
 }
 #gallery_nav {
     text-decoration: none;
-    color: #000000;
+    color: #ffffff;
 }
 #works_nav {
     text-decoration: none;
-    color: #000000;
+    color: #ffffff;
 }
 #about_nav {
     text-decoration: none;
-    color: #000000;
+    color: #ffffff;
 }
 .nav {
   position: relative;
