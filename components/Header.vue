@@ -125,5 +125,11 @@ export default class Header extends Vue {
         margin-left: 15%;
         font-size: 2vw;
     }
+    .nav::after {
+        bottom: -4px;
+    }
+    .nav:hover::after {
+        bottom: -2px;
+    }
 }
 </style>

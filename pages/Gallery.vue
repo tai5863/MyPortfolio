@@ -133,7 +133,7 @@ export default class Gallery extends Vue {
 
 @media screen and (max-width: 800px) {
     .gallery_container .container {
-        margin: 6vw 9.5vw;
+        margin: 6vw 9.5vw 0;
     }
     .gallery_container .img_container {
         width: 100%;

@@ -8,7 +8,7 @@
                 </div>
                 <div class="intro_container">
                     <div style="display: block">
-                        <p class="item">- Position</p>
+                        <p class="name">Taichi Uchida</p>
                         <p class="intro tag">Visual Artist / Programmer</p>
                         <p class="item">- Affiliation</p>
                         <p class="intro tag">2016.04  - Kyoto Prefectural Sagano High School, 京都府立嵯峨野高校 京都こすもす科(共修)</p>
@@ -117,6 +117,7 @@ export default class HomeHeader extends Vue {
 .about_container .photo {
     height: auto;
     width: min(60%, 300px);
+    margin: 0 0 6vw;
     width: 40%;
 }
 .intro_container {
@@ -125,6 +126,15 @@ export default class HomeHeader extends Vue {
     align-items: center;
     width: 100%;
     margin: 0 auto; 
+}
+.name {
+    text-align: left;
+
+    /* font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif; */
+    font-family: 'Kiona';
+    font-style: normal;
+    font-weight: normal;
+    font-size: min(30px, 3.0vw);
 }
 .position {
     text-align: left;
@@ -159,10 +169,10 @@ export default class HomeHeader extends Vue {
 
 @media screen and (max-width: 1200px) {
     .about_container .container {
-        margin: 8vw auto 8vw;
+        margin: 8vw auto 0vw;
     }
     .about_container .photo {
-        margin: 0 0 6vw;
+        margin: 0 0 8vw;
     }
 }
 
