@@ -104,7 +104,7 @@ export default class HomeHeader extends Vue {
     z-index: 1000;
 }
 .about_container .container {
-    margin: 2vw auto 2vw;
+    margin: 6vw auto 6vw;
     width: 63.5vw;
     height: 100%;
 }
@@ -159,7 +159,7 @@ export default class HomeHeader extends Vue {
 
 @media screen and (max-width: 1200px) {
     .about_container .container {
-        margin: 6vw auto 8vw;
+        margin: 8vw auto 8vw;
     }
     .about_container .photo {
         margin: 0 0 6vw;

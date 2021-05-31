@@ -96,7 +96,7 @@ export default class Header extends Vue {
   content: '';
   width: 100%;
   height: 1px;
-  background: #333;
+  background: #fff;
   opacity: 0;
   visibility: hidden;
   transition: .3s;
@@ -123,14 +123,7 @@ export default class Header extends Vue {
     }
     #header_container li {
         margin-left: 15%;
-        border-bottom: solid 1px white;
         font-size: 2vw;
-    }
-    .nav::after {
-        bottom: -4px;
-    }
-    .nav:hover::after {
-        bottom: -2px;
     }
 }
 </style>
