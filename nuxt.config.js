@@ -15,7 +15,7 @@ export default {
       { hid: 'og:url', property: 'og:url', content: 'https://ta1uchida.com' },
       { hid: 'og:title', property: 'og:title', content: "Taichi Uchida's Portfolio" },
       { hid: 'og:description', property: 'og:description', content: 'Visual Artist / Programmer.' },
-      { hid: 'og:image', property: 'og:image', content: '/img/MyProfile.img' },
+      { hid: 'og:image', property: 'og:image', content: '/img/MyProfile.jpg' },
       { name: 'twitter:card', content: 'summary' },　//twitterの画像サイズ
       { name: 'twitter:site', content: '@_t_ai__' },
       { name: 'twitter:creator', content: '@_t_ai__' }
