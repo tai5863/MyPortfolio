@@ -32,6 +32,7 @@ import WebGL from '@/components/WebGL.vue';
 export default class Home extends Vue {
     loading = true;
     count = 0;
+    navigation = 0;
 
     getImage() {
         profileImgStore.getImage()
@@ -88,8 +89,6 @@ export default class Home extends Vue {
         } else {
             this.toggleLoadingStatus();
         }
-        // localStorage.clear();
-        // console.log(localStorage);
     }
 }
 </script>
