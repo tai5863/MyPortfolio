@@ -138,7 +138,7 @@ export default class WorkPage extends Vue {
     /* font-family: 'Kiona', "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif; */
     font-style: normal;
     font-weight: normal;
-    font-size: max(min(18px, 1vw), 10px);
+    font-size: min(18px, 1.8vw);
 
     margin: 2vw 0;
 }
@@ -146,7 +146,7 @@ export default class WorkPage extends Vue {
     margin-top: 0.5vw;
 }
 .item {
-    font-size: max(min(20px, 1.3vw), 12px);
+    font-size: min(20px, 2.0vw);
     margin: 2vw 0 0;
     font-family: 'Kiona', "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif;
 }

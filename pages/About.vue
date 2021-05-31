@@ -130,17 +130,6 @@ export default class HomeHeader extends Vue {
     width: 100%;
     margin: 0 auto; 
 }
-.about_container .name {
-    text-align: left;
-
-    /* font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif; */
-    font-family: 'Kiona', "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: max(min(30px, 2vw), 15px);
-
-    margin: 0;
-}
 .position {
     text-align: left;
 
@@ -148,7 +137,7 @@ export default class HomeHeader extends Vue {
     font-family: 'Kiona';
     font-style: normal;
     font-weight: normal;
-    font-size: max(min(18px, 1vw), 10px);
+    font-size: min(18px, 1.8vw);
 
     padding-bottom: 2%;
 }
@@ -159,12 +148,12 @@ export default class HomeHeader extends Vue {
     /* font-family: 'Kiona'; */
     font-style: normal;
     font-weight: normal;
-    font-size: max(min(18px, 1vw), 10px);
+    font-size: min(18px, 1.8vw);
     margin-top: 0.5vw;
 }
 .item {
     font-family: 'Kiona';
-    font-size: max(min(20px, 1.3vw), 12px);
+    font-size: min(20px, 2vw);
     margin-top: 2vw;
 }
 .account {

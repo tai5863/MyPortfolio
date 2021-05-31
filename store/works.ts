@@ -47,6 +47,7 @@ export default class Works extends VuexModule {
                         work.messages = messages;
                         work.images = images;
                         work.cooperators = cooperators;
+                        work.index = (Object.keys(works).length - 1) - work.index;
 
                         this.getImages(work);
                     });
