@@ -112,7 +112,7 @@ export default class WorkPage extends Vue {
     width: 65vw;
 }
 .work_container .exp_container {
-    margin: 30px 0;
+    margin: 30px 0 0;
 }
 .work_container .title_container {
     text-align: left;
