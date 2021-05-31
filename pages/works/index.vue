@@ -46,6 +46,7 @@ export default class Works extends Vue {
         } else {
             this.works = worksStore.works;
         }
+        console.log(this.works);
     }
 
     mounted() {
