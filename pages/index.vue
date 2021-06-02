@@ -101,7 +101,6 @@ export default class Home extends Vue {
     transition: opacity 0.5s;
 }
 .home_container {
-    background-color: rgba(255, 255, 255, 0.0);
     min-height: 500px;
     position: absolute;
     top: 0;

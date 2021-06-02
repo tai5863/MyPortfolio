@@ -128,7 +128,7 @@ export default class Works extends Vue {
 
 @media screen and (max-width: 1200px) {
     .works_container .container {
-        margin: 6vw 17.5vw 0;
+        margin: 6vw 7.5vw 0;
     }
     .work {
         width: 100%;
@@ -149,7 +149,7 @@ export default class Works extends Vue {
 
 @media screen and (max-width: 800px) {
     .works_container .container {
-        margin: 6vw 9.5vw 0;
+        margin: 6vw 7.5vw 0;
     }
 }
 </style>

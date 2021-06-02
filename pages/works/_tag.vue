@@ -173,7 +173,10 @@ export default class WorkPage extends Vue {
     margin: 0 0 1vw;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
+    .batsu {
+        line-height: 100px;
+    }
     .work_container .container {
         width: 81vw;
         padding: 0;

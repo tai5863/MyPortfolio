@@ -178,7 +178,7 @@ export default class HomeHeader extends Vue {
 
 @media screen and (max-width: 800px) {
     .about_container .container {
-        width: 75vw;
+        width: 81vw;
     }
 }
 </style>
