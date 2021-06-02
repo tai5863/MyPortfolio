@@ -111,6 +111,10 @@ export default class Header extends Vue {
     #header {
         padding-top: 00px;
     }
+    #header_container {
+        /* margin: 0 17.5vw; */
+        height: 50px;
+    }
     #header_comp {
         top: 0;
         margin: 0;
