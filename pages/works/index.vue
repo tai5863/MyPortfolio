@@ -80,7 +80,7 @@ export default class Works extends Vue {
 
 <style scoped>
 .works_container .container {
-    margin: 2vw 13.5vw 0;
+    margin: 2.5vw 13.5vw 0;
     display: flex;
     justify-content: space-between;
     flex-flow: row wrap;
