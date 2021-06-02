@@ -78,9 +78,6 @@ export default class Gallery extends Vue {
 .gallery_container .container {
     margin: 2vw 17.5vw;
 }
-.item-wrapper {
-    padding-bottom: 5vw;
-}
 .item-wrapper .title {
     font-family: Kiona;
     margin: 1vw auto;
@@ -93,6 +90,9 @@ export default class Gallery extends Vue {
 }
 .iframe-wrapper {
     position: relative;
+}
+#reel-wrapper {
+    padding-bottom: 5vw;
 }
 .iframe-wrapper::before {
     content: "";
