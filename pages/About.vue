@@ -10,7 +10,7 @@
                     <div style="display: block">
                         <p class="name">Taichi Uchida</p>
                         <p class="intro tag">Visual Artist / Programmer</p>
-                        <p class="item">- Affiliation</p>
+                        <p class="item">- Education</p>
                         <p class="intro tag">2016.04  - Kyoto Prefectural Sagano High School, 京都府立嵯峨野高校 京都こすもす科(共修)</p>
                         <p class="intro tag">2019.04  - University of Tsukuba, Media Arts, Science and Technology / 筑波大学 情報メディア創成学類</p>
                         <p class="item">- Skills</p>
