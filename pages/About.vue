@@ -169,12 +169,17 @@ export default class HomeHeader extends Vue {
 
 @media screen and (max-width: 1200px) {
     .about_container .container {
-        margin: 8vw auto 0vw;
+        margin: 15vw auto 0vw;
     }
     .about_container .photo {
         margin: 0 0 8vw;
     }
 }
 
+@media screen and (max-width: 800px) {
+    .about_container .container {
+        width: 84.5vw;
+    }
+}
 </style>
 
