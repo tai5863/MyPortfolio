@@ -3,7 +3,13 @@
         <Header></Header>
         <div class="gallery_container">
         <div class="container">
-            <div class="item-wrapper" id="reel-wrapper">
+            <div class="item-wrapper upper">
+                <h1 class="title">Yottette VJ - TouchDesigner</h1>
+                <div class="iframe-wrapper">
+                    <iframe src="https://player.vimeo.com/video/558303190" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen id="reel"></iframe>
+                </div>
+            </div>
+            <div class="item-wrapper upper">
                 <h1 class="title">2020 Showreel - TouchDesigner</h1>
                 <div class="iframe-wrapper">
                     <iframe src="https://player.vimeo.com/video/502608124" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen id="reel"></iframe>
@@ -91,7 +97,7 @@ export default class Gallery extends Vue {
 .iframe-wrapper {
     position: relative;
 }
-#reel-wrapper {
+.upper {
     padding-bottom: 5vw;
 }
 .iframe-wrapper::before {
