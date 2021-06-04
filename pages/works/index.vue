@@ -4,7 +4,7 @@
         <div class="works_container">
             <div class="container" v-if="works.length !== 0">
                 <div v-for="(work, index) in works" :key="index" class="work">
-                    <router-link :to="`works/${work.tag}`" @click.native="onClick(index)">
+                    <router-link :to="`works/${work.tag}`" @click.native="onClick(index)" class="link">
                         <div class="img_wrapper">
                             <img :src="work.images[0]" class="img first" width="1920" height="1080" />
                         </div>
@@ -112,15 +112,14 @@ export default class Works extends Vue {
     width: 80%;
     height: auto;
     margin: 0 auto;
+    cursor: pointer;
 }
 .img {
     width: 100%;
     height: auto;
     margin: 0 auto;
     min-width: 300px;
-    cursor: pointer;
 }
-
 .img_wrapper :hover {
     opacity: 0.8;
     transition-duration: 0.5s;
