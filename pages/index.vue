@@ -65,6 +65,7 @@ export default class Home extends Vue {
 }
 .loading-enter-active,
 .loading-leave-active {
+  -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
 .home_container {

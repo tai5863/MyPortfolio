@@ -177,8 +177,11 @@ export default class Gallery extends Vue {
   height: 100%;
 }
 img[lazy='loaded'] {
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+  -webkit-animation-name: scrollIn;
   animation-name: scrollIn;
 }
 @keyframes scrollIn {

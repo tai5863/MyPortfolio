@@ -143,8 +143,11 @@ export default class Works extends Vue {
   cursor: pointer;
 }
 img[lazy='loaded'] {
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+  -webkit-animation-name: scrollIn;
   animation-name: scrollIn;
 }
 @keyframes scrollIn {
@@ -157,6 +160,7 @@ img[lazy='loaded'] {
 }
 .img_wrapper :hover {
   opacity: 0.8;
+  -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
 

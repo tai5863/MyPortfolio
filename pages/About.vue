@@ -145,8 +145,11 @@ export default class HomeHeader extends Vue {
   width: 40%;
 }
 img[lazy='loaded'] {
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+  -webkit-animation-name: scrollIn;
   animation-name: scrollIn;
 }
 @keyframes scrollIn {

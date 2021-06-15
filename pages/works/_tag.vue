@@ -244,8 +244,11 @@ export default class WorkPage extends Vue {
   margin: 0 0 1vw;
 }
 img[lazy='loaded'] {
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+  -webkit-animation-name: scrollIn;
   animation-name: scrollIn;
 }
 @keyframes scrollIn {

@@ -3,6 +3,7 @@
     <HalfCircleSpinner
       id="spinner"
       :animation-duration="2000"
+      :-webkit-animation-duration="2000"
       :size="60"
       color="#aaaaaa"
     />

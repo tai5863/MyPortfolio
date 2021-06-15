@@ -107,6 +107,7 @@ export default class Header extends Vue {
   background: #fff;
   opacity: 0;
   visibility: hidden;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 .nav:hover::after {
