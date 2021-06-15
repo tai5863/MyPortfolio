@@ -176,9 +176,6 @@ export default class Gallery extends Vue {
   width: 100%;
   height: 100%;
 }
-img {
-  will-change: opacity;
-}
 img[lazy='loaded'] {
   animation-duration: 1s;
   animation-fill-mode: both;

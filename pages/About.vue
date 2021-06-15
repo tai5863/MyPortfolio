@@ -144,9 +144,6 @@ export default class HomeHeader extends Vue {
   margin: 0 0 6vw;
   width: 40%;
 }
-img {
-  will-change: opacity;
-}
 img[lazy='loaded'] {
   animation-duration: 1s;
   animation-fill-mode: both;

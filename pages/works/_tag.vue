@@ -105,7 +105,7 @@ export default class WorkPage extends Vue {
   color = 'rgb(0, 0, 0)'
 
   get work(): Work {
-    console.log(worksStore.works[workIndexStore.index])
+    // console.log(worksStore.works[workIndexStore.index])
     return worksStore.works[workIndexStore.index]
   }
 
@@ -242,9 +242,6 @@ export default class WorkPage extends Vue {
   height: auto;
   min-width: 300px;
   margin: 0 0 1vw;
-}
-img {
-  will-change: opacity;
 }
 img[lazy='loaded'] {
   animation-duration: 1s;
