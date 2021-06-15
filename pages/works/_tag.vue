@@ -243,6 +243,9 @@ export default class WorkPage extends Vue {
   min-width: 300px;
   margin: 0 0 1vw;
 }
+img {
+  will-change: opacity;
+}
 img[lazy='loaded'] {
   animation-duration: 1s;
   animation-fill-mode: both;

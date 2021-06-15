@@ -134,6 +134,7 @@ export default class Works extends Vue {
   width: 80%;
   height: auto;
   margin: 0 auto;
+  will-change: opacity;
 }
 .img {
   width: 100%;
@@ -141,6 +142,9 @@ export default class Works extends Vue {
   margin: 0 auto;
   min-width: 300px;
   cursor: pointer;
+}
+img {
+  will-change: opacity;
 }
 img[lazy='loaded'] {
   animation-duration: 1s;

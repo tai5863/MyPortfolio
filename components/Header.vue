@@ -95,6 +95,7 @@ export default class Header extends Vue {
   position: relative;
   display: inline-block;
   text-decoration: none;
+  will-change: auto;
 }
 .nav::after {
   position: absolute;
