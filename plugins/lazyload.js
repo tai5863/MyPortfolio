@@ -3,4 +3,5 @@ import VueLazyload from 'vue-lazyload'
 
 Vue.use(VueLazyload, {
   observer: true,
+  loading: require('@/assets/img/waiting.jpg'),
 })
