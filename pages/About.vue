@@ -141,7 +141,7 @@ export default class HomeHeader extends Vue {
 .about_container .photo {
   height: auto;
   width: min(60%, 300px);
-  margin: 0 0 6vw;
+  margin: 0 0 10vw;
   width: 40%;
 }
 img[lazy='loaded'] {

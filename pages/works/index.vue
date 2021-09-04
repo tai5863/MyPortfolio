@@ -102,13 +102,19 @@ export default class Works extends Vue {
 
 <style scoped>
 .works_container .container {
-  margin: 2.5vw 13.5vw 0;
+  margin: 2.5vw 0vw 0;
   display: flex;
   justify-content: space-between;
   flex-flow: row wrap;
 }
+.works_container .container:after {
+  content: '';
+  display: block;
+  width: 33.33333%;
+  height: 0;
+}
 .work {
-  width: 50%;
+  width: 33.33333%;
   padding-bottom: 1vw;
 }
 .work_title {
