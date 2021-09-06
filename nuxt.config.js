@@ -17,7 +17,7 @@ export default {
       {
         hid: 'og:site_name',
         property: 'og:site_name',
-        content: 'Taichi Uchida',
+        content: 'Taichi Uchida / 内田 大智',
       },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       { hid: 'og:url', property: 'og:url', content: 'https://ta1uchida.com' },
