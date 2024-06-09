@@ -4,7 +4,7 @@
       <nav id="nav_for_sections">
         <ul id="header_ul">
           <li v-for="section in sections" :key="section.id">
-            <nuxt-link :id="'home_' + section + '_nav'" :to="'/' + section">{{
+            <nuxt-link :id="'home_' + section + '_nav'" :to="'/' + section" class="nav_link">{{
               section
             }}</nuxt-link>
           </li>
@@ -34,6 +34,9 @@ export default class HomeHeader extends Vue {
   transform: translateY(-50%);
   z-index: 1000;
 }
+#home_header_container {
+  background-color: rgba(255, 255, 255, 0.8);
+}
 #home_header_container #header_ul {
   position: relative;
   margin: 0 20%;
@@ -49,8 +52,13 @@ export default class HomeHeader extends Vue {
   font-size: min(30px, 7vw);
   line-height: 63px;
   text-align: center;
-
   margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.0);
+  border-radius: 10px;
+  transition: background-color 0.5s, opacity 0.5s;
+}
+#home_header_container li:hover {
+  background-color: rgba(240, 240, 240, 0.7);
 }
 #home_gallery_nav {
   text-decoration: none;
