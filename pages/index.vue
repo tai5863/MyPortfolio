@@ -81,6 +81,8 @@ export default class Home extends Vue {
   width: 100%;
   height: 95px;
   bottom: 12.5%;
+
+  background-color: rgba(255, 255, 255, 0.8);
 }
 .home_container .name {
   position: relative;
