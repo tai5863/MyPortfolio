@@ -57,7 +57,7 @@ export default class HomeHeader extends Vue {
   line-height: 63px;
   text-align: center;
   margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.0);
+  background-color: rgba(255, 255, 255, 0);
   border-radius: 10px;
   transition: background-color 0.5s, opacity 0.5s;
 }
