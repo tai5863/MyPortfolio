@@ -34,14 +34,12 @@ export default class Home extends Vue {
   navigation = 0
 
   getWorks() {
-    worksStore
-      .getWorks()
-      .then(() => {
-        this.toggleLoadingStatus()
-      })
-      .catch((err) => {
-        console.error(err)
-      })
+    worksStore.getWorks().then(() => {
+      this.toggleLoadingStatus()
+    })
+    // .catch((err) => {
+    //   console.error(err)
+    // })
   }
 
   toggleLoadingStatus() {

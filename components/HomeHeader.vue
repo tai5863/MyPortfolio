@@ -4,9 +4,13 @@
       <nav id="nav_for_sections">
         <ul id="header_ul">
           <li v-for="section in sections" :key="section.id">
-            <nuxt-link :id="'home_' + section + '_nav'" :to="'/' + section" class="nav_link">{{
-              section
-            }}</nuxt-link>
+            <nuxt-link
+              :id="'home_' + section + '_nav'"
+              :to="'/' + section"
+              class="nav_link"
+            >
+              {{ section }}
+            </nuxt-link>
           </li>
         </ul>
       </nav>
