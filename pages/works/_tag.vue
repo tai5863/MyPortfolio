@@ -188,7 +188,7 @@ export default class WorkPage extends Vue {
   text-align: left;
 }
 .work_container .work_name {
-  font-family: 'Kiona';
+  font-family: 'Kiona', '游ゴシック', 'Yu Gothic', '游ゴシック体', YuGothic, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: min(30px, 3vw);

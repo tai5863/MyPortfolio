@@ -120,7 +120,7 @@ export default class Works extends Vue {
 .work_title {
   width: 80%;
   margin: 0 auto;
-  font-family: 'Kiona';
+  font-family: 'Kiona', '游ゴシック', 'Yu Gothic', '游ゴシック体', YuGothic, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: min(20px, 2vw);
