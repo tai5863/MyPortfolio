@@ -2,7 +2,6 @@
   <div class="internship_container">
     <div class="child_header">
       <h2>Internship</h2>
-      <div class="line"></div>
     </div>
     <ul>
       <li v-for="internship in internships" :key="internship.name">
@@ -43,21 +42,16 @@ export default {
 .child_header {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
   width: 99%;
 }
 h2 {
   font-family: 'Kiona', '游ゴシック', 'Yu Gothic', '游ゴシック体', YuGothic,
     sans-serif;
   font-style: normal;
-  font-weight: bold;
+  font-weight: normal;
   font-size: min(30px, 3vw);
-}
-.line {
-  flex-grow: 1;
-  height: 1px;
-  background-color: black;
-  margin-left: 20px;
+  line-height: 10px;
+  margin-bottom: min(10px, 1vw);
 }
 ul {
   list-style-type: none;

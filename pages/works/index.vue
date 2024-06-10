@@ -2,10 +2,6 @@
   <div id="works">
     <Header></Header>
     <div class="works_container">
-      <div class="child_header">
-        <h2>Works</h2>
-        <div class="line"></div>
-      </div>
       <div v-if="works.length !== 0" class="container">
         <div v-for="(work, index) in works" :key="index" class="work">
           <div class="img_wrapper">
@@ -123,31 +119,13 @@ export default class Works extends Vue {
   width: 33.33333%;
   height: 0;
 }
-.child_header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-  margin: 2.5vw;
-  width: 94%;
-}
-h2 {
-  font-family: 'Kiona', '游ゴシック', 'Yu Gothic', '游ゴシック体', YuGothic,
-    sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: min(30px, 3vw);
-}
-.line {
-  flex-grow: 1;
-  height: 1px;
-  background-color: black;
-  margin-left: 20px;
-}
 .publication_container {
-  margin: 2.5vw;
+  margin: 0 3vw;
+  margin-top: 7vw;
 }
 .internship_container {
-  margin: 2.5vw;
+  margin: 0 3vw;
+  margin-top: 7vw;
 }
 .work {
   width: 33.33333%;

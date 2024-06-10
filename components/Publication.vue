@@ -2,7 +2,6 @@
   <div class="publication_container">
     <div class="child_header">
       <h2>Publications</h2>
-      <div class="line"></div>
     </div>
 
     <div v-for="(pubs, year) in groupedPublications" :key="year">
@@ -75,29 +74,24 @@ export default {
 .child_header {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
   width: 99%;
 }
 h2 {
   font-family: 'Kiona', '游ゴシック', 'Yu Gothic', '游ゴシック体', YuGothic,
     sans-serif;
   font-style: normal;
-  font-weight: bold;
+  font-weight: normal;
   font-size: min(30px, 3vw);
-}
-.line {
-  flex-grow: 1;
-  height: 1px;
-  background-color: black;
-  margin-left: 20px;
+  line-height: 10px;
+  margin-bottom: min(10px, 1vw);
 }
 .year {
   font-family: 'Kiona', '游ゴシック', 'Yu Gothic', '游ゴシック体', YuGothic,
     sans-serif;
   font-style: normal;
-  font-weight: bold;
+  font-weight: normal;
   font-size: min(24px, 2.4vw);
-  margin-top: min(20px, 2vw);
+  margin-top: min(10px, 1vw);
   margin-bottom: min(10px, 1vw);
 }
 ul {
