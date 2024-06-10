@@ -83,13 +83,11 @@ h2 {
   margin-bottom: min(10px, 1vw);
 }
 .year {
-  font-family: '游ゴシック', 'Yu Gothic', '游ゴシック体', YuGothic,
-    sans-serif;
+  font-family: 'Kiona', '游ゴシック', 'Yu Gothic', '游ゴシック体', YuGothic, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: min(24px, 2.4vw);
   margin-top: min(10px, 1vw);
-  margin-bottom: min(10px, 1vw);
 }
 ul {
   list-style-type: none;
