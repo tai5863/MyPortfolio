@@ -9,21 +9,17 @@
       <ul>
         <li v-for="publication in pubs" :key="publication.title">
           <p>
-            『
             <span v-if="publication.url">
-              <a
+              『<a
                 :href="publication.url"
                 target="_blank"
                 rel="noopener noreferrer"
                 >{{ publication.title }}</a
-              >
+              >』
             </span>
-            <span v-else>
-              {{ publication.title }}
-            </span>
-            』
+            <span v-else> 『{{ publication.title }}』 </span>
             <span>
-              ({{ publication.conference || 'No Conference' }}) -
+              ({{ publication.conference || 'No Conference'}}<span v-if="publication.format"> {{ publication.format }}</span>) -
               {{ publication.authors }}
             </span>
           </p>
@@ -43,6 +39,7 @@ export default {
           year: 2024,
           title: '3Dビュー探索による画像審美性の向上',
           conference: 'MIRU2024',
+          format: 'Poster Session',
           authors: 'Taichi Uchida, Yoshihiro Kanamori, Yuki Endo',
         },
         {
@@ -86,7 +83,7 @@ h2 {
   margin-bottom: min(10px, 1vw);
 }
 .year {
-  font-family: 'Kiona', '游ゴシック', 'Yu Gothic', '游ゴシック体', YuGothic,
+  font-family: '游ゴシック', 'Yu Gothic', '游ゴシック体', YuGothic,
     sans-serif;
   font-style: normal;
   font-weight: normal;
