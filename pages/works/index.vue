@@ -120,12 +120,10 @@ export default class Works extends Vue {
   height: 0;
 }
 .publication_container {
-  margin: 0 3vw;
-  margin-top: 7vw;
+  margin: 5vw 3vw;
 }
 .internship_container {
-  margin: 0 3vw;
-  margin-top: 7vw;
+  margin: 5vw 3vw;
 }
 .work {
   width: 33.33333%;
