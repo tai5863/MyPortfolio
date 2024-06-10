@@ -2,6 +2,10 @@
   <div id="works">
     <Header></Header>
     <div class="works_container">
+      <div class="child_header">
+        <h2>Works</h2>
+        <div class="line"></div>
+      </div>
       <div v-if="works.length !== 0" class="container">
         <div v-for="(work, index) in works" :key="index" class="work">
           <div class="img_wrapper">
@@ -18,6 +22,8 @@
         </div>
       </div>
     </div>
+    <publication class="publication_container"></publication>
+    <internship class="internship_container"></internship>
     <Footer></Footer>
   </div>
 </template>
@@ -28,12 +34,16 @@ import { workIndexStore, worksStore } from '@/store'
 import { Work } from '@/models/Work'
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
+import Publication from '~/components/Publication.vue'
+import Internship from '~/components/Internship.vue'
 
 @Component({
   name: 'Works',
   components: {
     Header,
     Footer,
+    Publication,
+    Internship,
   },
 })
 export default class Works extends Vue {
@@ -112,6 +122,32 @@ export default class Works extends Vue {
   display: block;
   width: 33.33333%;
   height: 0;
+}
+.child_header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  margin: 2.5vw;
+  width: 94%;
+}
+h2 {
+  font-family: 'Kiona', '游ゴシック', 'Yu Gothic', '游ゴシック体', YuGothic,
+    sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: min(30px, 3vw);
+}
+.line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: black;
+  margin-left: 20px;
+}
+.publication_container {
+  margin: 2.5vw;
+}
+.internship_container {
+  margin: 2.5vw;
 }
 .work {
   width: 33.33333%;
